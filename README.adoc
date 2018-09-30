@@ -1,0 +1,3 @@
+= packet-delayer
+
+Manage outgoing connection delay using discipline queues on debian-like distributions (and possibly others).
