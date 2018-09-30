@@ -1,3 +1,36 @@
 = packet-delayer
+Giuseppe Ricupero <giuseppe.ricupero@gmail.com>
+v0.1.0
 
-Manage outgoing connection delay using discipline queues on debian-like distributions (and possibly others).
+Manage the most common cases regarding delay on outgoing connections using the `tc` (traffic control) linux utility and its `netem` (network emulation) module. Tested on Lubuntu `v.16.04.5`, it should work on any debian-like distribution (and possibly others).
+
+== Usage
+
+- List all the discipline queues of a specific interface:
+
+  delayer.sh list <iface>                  # e.g.: delayer.sh list eth0
+
+- List all the discipline queues on all the net interfaces:
+
+  delayer.sh list
+
+- Add a delay to all outgoing connections:
+
+  delayer.sh add <delay>                   # e.g.: delayer.sh add 200ms
+
+- Add a delay through a specific interface:
+
+  delayer.sh add <delay> <iface>           # e.g.: delayer.sh add 200ms eth0
+
+- Add a delay towards a specific host or ip:
+
+  delayer.sh add <delay> <ip|host>         # e.g.: delayer.sh add 200ms api.example.com
+
+- Reset the discipline queue on all the net interfaces:
+
+  delayer.sh reset
+
+- Reset the discipline queue of a specific interface:
+
+  delayer.sh reset <iface>                 # e.g.: delayer.sh reset eth0
+
