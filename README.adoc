@@ -18,7 +18,7 @@ Manage the most common cases regarding delay on outgoing connections using the `
 
   delayer.sh add <delay>                   # e.g.: delayer.sh add 200ms
 
-- Add a delay through a specific interface:
+- Add a delay to a specific interface:
 
   delayer.sh add <delay> <iface>           # e.g.: delayer.sh add 200ms eth0
 
@@ -26,7 +26,7 @@ Manage the most common cases regarding delay on outgoing connections using the `
 
   delayer.sh add <delay> <ip|host>         # e.g.: delayer.sh add 200ms api.example.com
 
-- Reset the discipline queue on all the net interfaces:
+- Reset the discipline queues of all the net interfaces:
 
   delayer.sh reset
 

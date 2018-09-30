@@ -32,13 +32,13 @@ usage() { # {{{
 	echo "- To add a delay to all outgoing connections:"
 	echo "    $exe add <delay>                   # e.g.: $exe add 200ms"
 	echo
-	echo "- To add a delay through a specific interface:"
+	echo "- To add a delay to a specific interface:"
 	echo "    $exe add <delay> <iface>           # e.g.: $exe add 200ms eth0"
 	echo
 	echo "- To add a delay towards a specific host or ip:"
 	echo "    $exe add <delay> <ip|host>         # e.g.: $exe add 200ms api.example.com"
 	echo
-	echo "- To reset the discipline queue on all the net interfaces:"
+	echo "- To reset the discipline queues of all the net interfaces:"
 	echo "    $exe reset"
 	echo
 	echo "- To reset the discipline queue of a specific interface:"
